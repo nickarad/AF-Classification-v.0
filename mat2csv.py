@@ -1,35 +1,30 @@
+# https://github.com/mondejar/ecg-classification.git
+
 from os import listdir, mkdir, system
 from os.path import isfile, isdir, join, exists
 
-dir = 'training2017/'
+dir = 'training2017/'#'mitdb/'
 #Create folder
-csv = dir + 'csv'
-if not exists(csv):
-	mkdir(csv)
+dir_out = 'training2017CSV/'
+if not exists(dir_out):
+	mkdir(dir_out)
 
 records = [f for f in listdir(dir) if isfile(join(dir, f)) if(f.find('.mat') != -1)]
-#print records
-records.sort() 
 # print(records)
-print(len(records))
+
 for r in records:
-	print(r[:-4])
-	command = 'rdsamp -r ' + r + ' -c -f 0 -t 10 >' + r[:-4] +'.csv'
+	# print(r)
+	# --> Create Csv files
+	command = 'rdsamp -r ' + dir + r[:-4] + ' -c -H -f 0 -v >' + dir_out + r[:-4] + '.csv'
 	print(command)
 	system(command)
+	#  --> Create annotation files
+	# command_annotations = 'rdann -r ' + dir + r[:-4] +' -f 0 -a atr -v >' + dir_out + r[:-4] + 'annotations.txt'
+	# print(command_annotations)
+	# system(command_annotations)
+   
 
-# r = 'training2017/A00001'
-# command = 'rdsamp -r ' + r + ' -c -f 0 -t 10 >samples.csv'
-
-
-
-print(command)
-system(command)
-
-# for r in records:
-    # print r
-	# command = 'rdsamp -r ' + r[:-4] + ' -c -H -f 0 -v >' + 'csv/' + r[:-4] + '.csv'
-	# print(command)
-	# system(command)
-
-	
+# system(command_annotations)
+records.sort()
+print(records)
+print(len(records))
