@@ -1,12 +1,15 @@
 import tensorflow as tf 
+import pandas as pd
+import numpy as np
+from os import listdir
+from os.path import isfile, join
+import labels as lb
 
-# Creates a dataset that reads all of the records from two CSV files, each with
-# eight float columns
-
-filenames = ["samples.csv", "samples1.csv"]
-print(filenames)
-
-record_defaults = [[0.1]] * 2 
-dataset = tf.data.experimental.CsvDataset(filenames, record_defaults)
-
-print(dataset)
+# def load_data():
+dir = 'training2017CSV/'
+records = [f for f in listdir(dir) if isfile(join(dir, f)) if(f.find('.csv') != -1)]
+# print(records)
+y, f = lb.get_labels()
+print(y)
+# print(f)
+print(y[0])
