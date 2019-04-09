@@ -14,8 +14,8 @@ y, f = lb.get_labels()
 # print(y)
 # print(f)
 print(type(y))
-records = ['A00001.csv','A00002.csv']
-print(records)
+# records = ['A00001.csv','A00002.csv']
+# print(records)
 
 x_train = np.array([])
 
@@ -31,6 +31,7 @@ for r in records:
     # print(x)
     x = x[0:2714]
     x_train = np.append(x_train,x)
+    print(dir + r)
 
 x_train = x_train.reshape(-1, 2714)
 print(x_train)    
