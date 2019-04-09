@@ -5,15 +5,9 @@ from os import listdir
 from os.path import isfile, join
 import labels as lb
 
-# def load_data():
 dir = 'training2017CSV/'
 records = [f for f in listdir(dir) if isfile(join(dir, f)) if(f.find('.csv') != -1)]
 records.sort() 
-# print(records)
-# y, f = lb.get_labels()
-# print(y)
-# print(f)
-# print(type(y))
 
 counter = 0
 minim = 9000
