@@ -19,17 +19,17 @@ print(type(y))
 
 x_train = np.array([])
 
-
 for r in records:
     test = pd.read_csv(dir + r)
     test = test.values.tolist()
+    test = test[0:2714]
     # test = test[:,1]
     x = np.array([])
     for t in test:
         # print(t[1])
         x = np.append(x,t[1])
     # print(x)
-    x = x[0:2714]
+    # x = x[0:2714]
     x_train = np.append(x_train,x)
     print(dir + r)
 
