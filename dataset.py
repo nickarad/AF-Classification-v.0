@@ -14,7 +14,7 @@ y, f = lb.get_labels()
 # print(y)
 # print(f)
 print(type(y))
-records = ['A00001.csv','A00002.csv']
+# records = ['A00001.csv','A00002.csv']
 # print(records)
 
 x_train = np.array([])
