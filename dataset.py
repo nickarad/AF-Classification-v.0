@@ -14,20 +14,22 @@ y, f = lb.get_labels()
 # print(y)
 # print(f)
 print(type(y))
-# records = ['A00001.csv','A00002.csv']
+records = ['A00001.csv','A00002.csv']
 # print(records)
 
 x_train = np.array([])
 
 for r in records:
-    test = pd.read_csv(dir + r)
+    test = pd.read_csv(dir + r, index_col=0,nrows=2714)
     test = test.values.tolist()
-    test = test[0:2714]
+    print(test)
+    # test = test[0:2714]
+
     # test = test[:,1]
     x = np.array([])
     for t in test:
         # print(t[1])
-        x = np.append(x,t[1])
+        x = np.append(x,t)
     # print(x)
     # x = x[0:2714]
     x_train = np.append(x_train,x)
