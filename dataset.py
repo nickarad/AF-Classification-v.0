@@ -41,6 +41,6 @@ def load_data():
     # print(x_train)  
     return y,x_train
 
-y,x = load_data()
-print(y)
-print(x)
+# y,x = load_data()
+# print(y)
+# print(x)
