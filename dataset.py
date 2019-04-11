@@ -22,7 +22,7 @@ x_train = np.array([])
 for r in records:
     test = pd.read_csv(dir + r, index_col=0,nrows=2714)
     test = test.values.tolist()
-    print(test)
+    # print(test)
     # test = test[0:2714]
 
     # test = test[:,1]
