@@ -34,7 +34,7 @@ def load_data():
         # print(x)
         # x = x[0:2714]
         x_train = np.append(x_train,x)
-        # print(dir + r)
+        print(dir + r)
 
     x_train = x_train.reshape(-1, 2714)
     x_train = tf.keras.utils.normalize(x_train, axis = 1)
