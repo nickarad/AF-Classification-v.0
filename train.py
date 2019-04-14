@@ -24,8 +24,8 @@ print(val_acc)  # model's accuracy
 
 # ************************************* Make predictions ***************************************************
 predictions = model.predict(x_test)
-print("prediction:", np.argmax(predictions[8]))
-print("real value:", y_test[8])
+print("prediction:", np.argmax(predictions[0]))
+print("real value:", y_test[0])
 # ======================================================================================================
 
 # ************************************* Save Model ***************************************************
