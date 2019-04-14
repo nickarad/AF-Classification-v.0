@@ -5,8 +5,7 @@ from os import listdir
 from os.path import isfile, join
 import labels as lb
 from tensorflow import keras
-
-# 
+import matplotlib.pyplot as plt 
   
 def load_data():
     dir = 'training2017CSV/'
@@ -18,6 +17,7 @@ def load_data():
     # print(f)
     # print(type(y))
     # records = ['A00001.csv','A00002.csv']
+    records = records[0:1000]
     # print(records)
     x_train = np.array([])
     for r in records:
@@ -44,3 +44,7 @@ def load_data():
 # y,x = load_data()
 # print(y)
 # print(x)
+
+# plt.plot(x[0])
+# plt.grid(color='r', linestyle='--', linewidth=0.3)
+# plt.show()
