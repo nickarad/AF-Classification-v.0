@@ -21,3 +21,16 @@ val_loss, val_acc = model.evaluate(x_test, y_test)  # evaluate the out of sample
 print(val_loss)  # model's loss (error)
 print(val_acc)  # model's accuracy
 # ======================================================================================================
+
+# ************************************* Make predictions ***************************************************
+predictions = model.predict(x_test)
+print("prediction:", np.argmax(predictions[8]))
+print("real value:", y_test[8])
+# ======================================================================================================
+
+# ************************************* Save Model ***************************************************
+model.summary()
+# Save entire model
+model.save('my_model.h5')
+# ======================================================================================================
+
