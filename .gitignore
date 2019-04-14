@@ -1,2 +1,4 @@
 .vscode/settings.json
 dataset.pyc
+createmodel.pyc
+my_model.h5
