@@ -17,7 +17,7 @@ def load_data():
     # print(f)
     # print(type(y))
     # records = ['A00001.csv','A00002.csv']
-    records = records[0:1000]
+    records = records[0:7000]
     # print(records)
     x_train = np.array([])
     for r in records:
