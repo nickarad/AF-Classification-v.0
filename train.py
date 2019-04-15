@@ -6,11 +6,13 @@ import dataset as ds
 from tensorflow import keras
 
 # ************************************* Prepare Dataset ************************************************
+num_train = 100
+num_test = 20
 y,x = ds.load_data()
-x_train = x[0:5999]
-y_train = y[0:5999]
-x_test = x[6000:6999]
-y_test = y[6000:6999]
+x_train = x[0:num_train - 1]
+y_train = y[0:num_train - 1]
+x_test = x[num_train: num_train + num_test -1]
+y_test = y[num_train: num_train + num_test -1]
 # ======================================================================================================
 
 # ************************************* Create Model ***************************************************
