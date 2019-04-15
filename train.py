@@ -2,11 +2,16 @@ import tensorflow as tf
 import matplotlib.pyplot as plt 
 import numpy as np
 import createmodel as crm
-import dataset as ds
+# import dataset as ds
 from tensorflow import keras
 
 # ************************************* Prepare Dataset ************************************************
-y,x = ds.load_data()
+x = np.load('x_data.npy')
+y = np.load('y_data.npy')
+print(x)
+print(y)
+print(x.shape)
+# y,x = ds.load_data()
 x_train = x[0:2499]
 y_train = y[0:2499]
 x_test = x[2500:2999]
@@ -24,8 +29,9 @@ print(val_acc)  # model's accuracy
 
 # ************************************* Make predictions ***************************************************
 predictions = model.predict(x_test)
-print("prediction:", np.argmax(predictions[0]))
-print("real value:", y_test[0])
+test = 2
+print("prediction:", np.argmax(predictions[test]))
+print("real value:", y_test[test])
 # ======================================================================================================
 
 # ************************************* Save Model ***************************************************
