@@ -42,7 +42,7 @@ def load_data():
     return y,x_train
 
 y,x = load_data()
-np.save('X_data.npy', x)
+np.save('x_data.npy', x)
 np.save('y_data.npy', y)
 # print(y)
 # print(x)
