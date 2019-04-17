@@ -22,9 +22,9 @@ y_test = y[train_num:train_num + test_num -1]
 
 # ************************************* Create Model ***************************************************
 model = crm.create_model()
-model.fit(x_train, y_train, epochs=20)
+model.fit(x_train, y_train, epochs=8)
 # -- model accurancy
-val_loss, val_acc = model.evaluate(x_test, y_test,batch_size=256,verbose=2, shuffle=True, callbacks=[checkpointer])  # evaluate the out of sample data with model
+val_loss, val_acc = model.evaluate(x_test, y_test)  # evaluate the out of sample data with model
 print(val_loss)  # model's loss (error)
 print(val_acc)  # model's accuracy
 # ======================================================================================================
