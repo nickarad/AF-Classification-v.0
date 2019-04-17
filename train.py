@@ -12,10 +12,12 @@ print(x)
 print(y)
 print(x.shape)
 # y,x = ds.load_data()
-x_train = x[0:2499]
-y_train = y[0:2499]
-x_test = x[2500:2999]
-y_test = y[2500:2999]
+train_num = 6000
+test_num = 1000
+x_train = x[0:train_num -1]
+y_train = y[0:train_num -1]
+x_test = x[train_num:train_num + test_num -1]
+y_test = y[train_num:train_num + test_num -1]
 # ======================================================================================================
 
 # ************************************* Create Model ***************************************************
