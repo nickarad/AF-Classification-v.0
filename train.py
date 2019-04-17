@@ -12,8 +12,8 @@ print(x)
 print(y)
 print(x.shape)
 # y,x = ds.load_data()
-train_num = 6000
-test_num = 1000
+train_num = 800
+test_num = 200
 x_train = x[0:train_num -1]
 y_train = y[0:train_num -1]
 x_test = x[train_num:train_num + test_num -1]
@@ -22,7 +22,7 @@ y_test = y[train_num:train_num + test_num -1]
 
 # ************************************* Create Model ***************************************************
 model = crm.create_model()
-model.fit(x_train, y_train, epochs=3)
+model.fit(x_train, y_train, epochs=10)
 # -- model accurancy
 val_loss, val_acc = model.evaluate(x_test, y_test)  # evaluate the out of sample data with model
 print(val_loss)  # model's loss (error)
@@ -37,7 +37,7 @@ print("real value:", y_test[test])
 # ======================================================================================================
 
 # ************************************* Save Model ***************************************************
-model.summary()
+# model.summary()
 # Save entire model
 model.save('my_model.h5')
 # ======================================================================================================
