@@ -12,8 +12,8 @@ print(x)
 print(y)
 print(x.shape)
 # y,x = ds.load_data()
-train_num = 800
-test_num = 200
+train_num = 3000
+test_num = 500
 x_train = x[0:train_num -1]
 y_train = y[0:train_num -1]
 x_test = x[train_num:train_num + test_num -1]
