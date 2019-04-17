@@ -6,7 +6,7 @@ def create_model():
         tf.keras.layers.Dense(4096,kernel_initializer='normal', activation=tf.nn.relu, input_shape=(2714,)),
         tf.keras.layers.Dense(4096,kernel_initializer='normal', activation=tf.nn.relu),
         tf.keras.layers.Dropout(0.5),
-        tf.keras.layers.Dense(2048,kernel_initializer='normal', activation=tf.nn.relu)),
+        tf.keras.layers.Dense(2048,kernel_initializer='normal', activation=tf.nn.relu),
         tf.keras.layers.Dense(2048,kernel_initializer='normal', activation=tf.nn.relu),
         tf.keras.layers.Dropout(0.5),
         tf.keras.layers.Dense(1024,kernel_initializer='normal', activation=tf.nn.relu),
