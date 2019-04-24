@@ -4,3 +4,4 @@ createmodel.pyc
 my_model.h5
 x_data.npy
 y_data.npy
+x_filtered.npy
