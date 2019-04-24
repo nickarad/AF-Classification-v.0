@@ -6,7 +6,7 @@ import createmodel as crm
 from tensorflow import keras
 
 # ************************************* Prepare Dataset ************************************************
-x = np.load('x_data.npy')
+x = np.load('x_filtered.npy')
 y = np.load('y_data.npy')
 print(x)
 print(y)
