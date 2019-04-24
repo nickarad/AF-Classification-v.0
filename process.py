@@ -7,7 +7,7 @@ from biosppy.signals import ecg
 
 x = np.load('x_data.npy')
 y = np.load('y_data.npy')
-x = x[0:100]
+# x = x[0:100]
 x_filt = np.array([])
 for ecg_signal in x:
     # ecg_signal = r
