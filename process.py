@@ -1,6 +1,6 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
-import neurokit as nk
+# import neurokit as nk
 from biosppy import storage
 from biosppy.signals import ecg
 
